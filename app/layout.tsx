@@ -1,4 +1,9 @@
-import './globals.css';
+// @import Providers
+import Providers from '@app/providers';
+// @import Translation
+import { language } from '@app/i18n';
+// @import Styles
+import '@app/globals.css';
 
 export default function RootLayout({
 	children,
@@ -6,8 +11,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body>{children}</body>
-		</html>
+		<Providers>
+			<html lang={language}>
+				<body>{children}</body>
+			</html>
+		</Providers>
 	);
 }
