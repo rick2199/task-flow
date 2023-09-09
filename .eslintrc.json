@@ -18,5 +18,14 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react"],
-	"rules": { "@typescript-eslint/explicit-function-return-type": "off" }
+	"rules": {
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/consistent-type-definitions": "off",
+		"no-restricted-imports": [
+			"error",
+			{
+				"patterns": [".*"]
+			}
+		]
+	}
 }
